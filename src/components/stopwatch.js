@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Time from './format_time';
 
 class Stopwatch extends Component {
     constructor(props){
@@ -39,21 +40,7 @@ class Stopwatch extends Component {
             setTimeout(this.update, 10);
          } 
     }
-
-render() {
-        const {elapsed, status} = this.state;
-
-        return (
-            <div>
-                <h1>{elapsed}</h1>
-                <p>{status}</p>
-                <button onClick = {this.start}>Start</button>
-                <button onClick = {this.stop}>Stop</button>
-                <button onClick = {this.reset}>Reset</button>
-            </div>
-        )
-    }
-
+    
     reset() {
         this.setState({
             status : 'stopped',
@@ -61,6 +48,23 @@ render() {
             elapsed : 0
         })
     }
+
+render() {
+        const {elapsed, status} = this.state;
+
+        return (
+            <div className = "jumbotron">
+                <h1 className = "display-3"><Time elapsed = {elapsed}/></h1>
+                <hr className = "my-3"/>
+                <p className = "lead text-center">{status}</p>
+                <button className = "btn btn-outline-success mx-3" onClick = {this.start}>Start</button>
+                <button className = "btn btn-outline-danger mx-3" onClick = {this.stop}>Stop</button>
+                <button className = "btn btn-outline-warning mx-3" onClick = {this.reset}>Reset</button>
+            </div>
+        )
+    }
+
+    
 }
 
 export default Stopwatch;
