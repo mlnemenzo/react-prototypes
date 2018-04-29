@@ -16,9 +16,16 @@ class Stopwatch extends Component {
     }
     
     start() {
+        const {start, elapsed} = this.state;
+        let newStart = new Date().getTime();
+
+        if (start) {
+            newStart -= elapsed;
+        }
+
         this.setState({
             status : 'running',
-            start : new Date().getTime()
+            start : newStart
         });
         
         setTimeout(this.update, 10);
@@ -57,9 +64,11 @@ render() {
                 <h1 className = "display-3"><Time elapsed = {elapsed}/></h1>
                 <hr className = "my-3"/>
                 <p className = "lead text-center">{status}</p>
+                <p className = "text-center">
                 <button className = "btn btn-outline-success mx-3" onClick = {this.start}>Start</button>
                 <button className = "btn btn-outline-danger mx-3" onClick = {this.stop}>Stop</button>
                 <button className = "btn btn-outline-warning mx-3" onClick = {this.reset}>Reset</button>
+                </p>
             </div>
         )
     }
