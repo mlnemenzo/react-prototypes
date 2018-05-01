@@ -6,8 +6,8 @@ class ContactForm extends Component {
 
         this.state = {
             form: {
-            firstName : '',
-            lastName : ''
+                firstName : '',
+                lastName : ''
             }
         };
 
@@ -18,16 +18,20 @@ class ContactForm extends Component {
 
     handleInputChange(event) {
 
-                const {value, name} = event.target;
+        const {value, name} = event.target;
 
-                const {form} = this.state;
+        console.log(event.target);
+        console.log(value);
 
-                form[name] = value;
+        this.setState({
+            form: { ...this.state.form, [name]: value }
+        });
 
-                this.setState({
-                    form: {... form}
-                }); 
-            }
+    }
+
+    handleSubmit() {
+
+    }
 
 
     render() {
