@@ -6,6 +6,7 @@
 }
 
 .scrapbook-image {
+    position: absolute;
     width: 20%;
     border: 10px solid #fff
 }

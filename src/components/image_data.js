@@ -17,26 +17,50 @@ export default [
     },
     {
         src : photo2,
-        style : {}
+        style : {
+            left : "40%",
+            transform : "rotate(6deg)"
+        }
     },
     {
         src : photo3,
-        style : {}
+        style : {
+            right : "15%",
+            transform : "rotate(-9deg)"
+        }
     },
     {
         src : photo4,
-        style : {}
+        style : {
+            left : "8%",
+            top : "28%",
+            transform : "rotate(8deg)"
+        }
     },
     {
         src : photo5,
-        style : {}
+        style : {
+            left : "37%",
+            top : "25%",
+            transform : "rotate(-12deg)"
+        }
     },
     {
         src : photo6,
-        style : {}
+        style : {
+            right : "12%",
+            top : "26%",
+            transform : "rotate(10deg)"
+        }
+        
     },
     {
         src : photo7,
-        style : {}
+        style : {
+            left : "25%",
+            top : "48%",
+            transform : "rotate(16deg)"
+        }
+
     }
 ];
