@@ -8,6 +8,5 @@ export default props => {
             <MovieContainer/>
         </div>
     )
-}
 
 
