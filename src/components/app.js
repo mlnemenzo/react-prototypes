@@ -1,12 +1,11 @@
 import React from 'react';
-import MovieContainer from './movie_container';
 
-export default props => {
+function App() {
     return (
-        <div className = "container">
-            <h1 className = "text-center">Axios Demo</h1>
-            <MovieContainer/>
+        <div>
+            <h1>This is what you get for messing with the master branch.</h1>
         </div>
     )
+}
 
-
+export default App;
