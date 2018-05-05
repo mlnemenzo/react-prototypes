@@ -1,15 +1,12 @@
 import React from 'react';
-import './app.css';
-import Scrapbook from './scrapbook'
+import MovieContainer from './movie_container';
 
-export default () => {
-
+export default props => {
     return (
-        <div className = "main-container">
-            <h1 className = "main-title">Scrapbook</h1>
-            <Scrapbook/>        
+        <div className = "container">
+            <h1 className = "text-center">Axios Demo</h1>
+            <MovieContainer/>
         </div>
-    );
-}
+    )
 
 
