@@ -1,11 +1,9 @@
 import React from 'react';
+import Clock from './clock'
 
-function App() {
-    return (
-        <div>
-            <h1>This is what you get for messing with the master branch.</h1>
-        </div>
-    )
+export default () => {
+    return <div className = "container">
+        <h1 className="text-cetner"> Any text I want.</h1>
+        <Clock/>
+    </div>
 }
-
-export default App;
